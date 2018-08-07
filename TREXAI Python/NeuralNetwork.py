@@ -6,7 +6,7 @@ https://github.com/CodingTrain/Toy-Neural-Network-JS
 import numpy as np
 import math
 
-class NeuralNetwork2():
+class NeuralNetwork():
   
   def __init__(self, inputNodes = 1, hiddenNodes = 2, outputNodes = 1):
     
@@ -61,7 +61,7 @@ bias_H = np.array([[-0.21563776189668848],
 
 bias_O = np.array([[0.6185515893532649]])
 
-nn = NeuralNetwork2(3, 7, 1)
+nn = NeuralNetwork(3, 7, 1)
 nn.setWeights(weights_IH, weights_HO, bias_H, bias_O)
 
 

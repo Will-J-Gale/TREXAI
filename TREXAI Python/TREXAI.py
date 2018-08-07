@@ -214,7 +214,7 @@ with detection_graph.as_default():
             brainInput = np.array([[closestEnemy[0], closestEnemy[1], distance]])
             prediction = nn.predict(brainInput)
 
-            if(prediction > 0.5):
+            if(prediction > 0.55): #Had to add a little offset to the prediction due to JavaScript measurments not being 100% correct
               jump()
               
         #cv2.imshow(SCREEN_NAME, screen) #Uncomment to show bounding boxes (Reduces framerate by about 2)

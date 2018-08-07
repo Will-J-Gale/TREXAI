@@ -12,8 +12,10 @@
 
 1. **TREXAI Python** 
 
-   Contains python code to play Google's dino game
+   Contains python code to play Google's dino game  
+   Weights trained in the JavaScript program were copied into this program
   
 2. **TREXAI JavaScript** 
 
-   Contains JavaScript code that trained the "neuroevolution" algorithm
+   Contains JavaScript code that trained the "neuroevolution" algorithm  
+   

@@ -1,5 +1,5 @@
 # TREXAI
-## A Basic "Neuroevolution" algoirithm to play Google's offline dino game
+## A VERY basic Neuroevolution/Genetic algoirithm to play Google's offline dino game
 
 ![alt text](https://github.com/Will-J-Gale/TREXAI/blob/master/Images/TREXAI.gif)
 

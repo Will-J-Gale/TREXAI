@@ -1,1 +1,3 @@
 # TREXAI
+##TODO
+##Prerequisits

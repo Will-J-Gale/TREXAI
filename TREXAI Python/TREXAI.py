@@ -23,7 +23,7 @@ Google Object Detection Code
 if tf.__version__ < '1.4.0':
   raise ImportError('Please upgrade your tensorflow installation to v1.4.* or later!')
 
-MODEL_NAME = 'TREXAI_Graph2'
+MODEL_NAME = 'TREXAI_Graph'
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 PATH_TO_LABELS = os.path.join('labels', 'object-detection.pbtxt')
 
@@ -157,11 +157,7 @@ THRESHOLD = 0.7
 MOVE_SCALE = 20000
 distanceBeforeJump = 0.2
 enemyPositions = []
-#brain = NeuralNetwork();
-#keys = k.Keys({})
   
-#gpuOptions = tf.GPUOptions(per_process_gpu_memory_fraction = 0.7)
-
 with detection_graph.as_default():
   with tf.Session() as sess:
     while(True):
@@ -180,15 +176,16 @@ with detection_graph.as_default():
         # Actual detection.
         output_dict = run_inference_for_single_image(screen, sess)
         # Visualization of the results of a detection.
-        vis_util.visualize_boxes_and_labels_on_image_array(
-            screen,
-            output_dict['detection_boxes'],
-            output_dict['detection_classes'],
-            output_dict['detection_scores'],
-            category_index,
-            instance_masks=output_dict.get('detection_masks'),
-            use_normalized_coordinates=True,
-            line_thickness=8)
+##        vis_util.visualize_boxes_and_labels_on_image_array(
+##            screen,
+##            output_dict['detection_boxes'],
+##            output_dict['detection_classes'],
+##            output_dict['detection_scores'],
+##            category_index,
+##            instance_masks=output_dict.get('detection_masks'),
+##            use_normalized_coordinates=True,
+##            line_thickness=8)
+        #Uncomment above code to add bounding boxes to image
         
         '''
         Custom Code
@@ -216,7 +213,7 @@ with detection_graph.as_default():
 
             if(prediction > 0.55): #Had to add a little offset to the prediction due to JavaScript measurments not being 100% correct
               jump()
-              
+
         #cv2.imshow(SCREEN_NAME, screen) #Uncomment to show bounding boxes (Reduces framerate by about 2)
         previousTime = time.time()
         

@@ -139,7 +139,7 @@ def jump():
   release('spacebar')
   
 #User Variables
-SCREEN_REGION = (0, 300, 1920, 800) # Coords of where to take screenshiot
+SCREEN_REGION = (0, 300, 1920, 800) # Coords of where to capture screen
 IMAGE_SIZE = (SCREEN_REGION[2] - SCREEN_REGION[0], SCREEN_REGION[3] - SCREEN_REGION[1])
 IMAGE_SCALE = 2
 IMAGE_NEW_SIZE = (int(IMAGE_SIZE[0] / IMAGE_SCALE), int(IMAGE_SIZE[1] / IMAGE_SCALE))

@@ -1,16 +1,9 @@
-/* function NeuralNetwork()
-{
-    let model = tf.sequential();
-    let hidden1 = tf.layers.dense({inputShape: [1], units: 2, activation: "relu"});
-    let output = tf.layers.dense({inputShape: [2], units: 1});
 
-    model.add(hidden1);
-    model.add(output);
-
-    model.compile({loss: 'meanSquaredError', optimizer: 'adam'})
-
-    return model;
-} */
+/**
+ * Used the Toy Neural Network by Daniel Shiffman AKA Coding Train
+ * https://github.com/CodingTrain/Toy-Neural-Network-JS/tree/master/lib
+ * 
+ */
 
 function sigmoid(x)
 {

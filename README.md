@@ -8,12 +8,14 @@ First the the google object detection api was trained to recognise the trex and 
 Then a JavaScript copy of the real dino game was created and a simple neuroevolution/genetic algorithm was trained.
 When trained the weights were copied into the python version which used the exact same neural network shape.
 The detected trex and enemy positions were used as the input to the python neural network.
-## Python Prerequisits
 
+## Python Prerequisits
 * OpenCV.
 * Tensorflow GPU.
 * Numpy.
-* Google Object Detection API.
+* Google Object Detection API.  
+   * Run setup.py in "models/research" folder of Google Object Detection API
+* Pywin32
 
 ## Contents
 

@@ -6,7 +6,6 @@ import numpy as np
 import os, cv2
 import tensorflow as tf
 from grabscreen import grab_screen
-from getkeys import key_check
 from virtualkeyboard import press, release
 from collections import defaultdict
 from object_detection.utils import label_map_util
@@ -132,6 +131,11 @@ def getPositionFromBox(box):
 
   return pos
 
+def showFrameTime():
+  global previousTime
+  print(time.time() - previousTime)
+  previousTime = time.time()
+    
 def jump():
   #Make the TREX jump
   press('spacebar')
@@ -160,8 +164,8 @@ enemyPositions = []
   
 with detection_graph.as_default():
   with tf.Session() as sess:
+    print("TREX_AI Running")
     while(True):
-        pressedKeys = key_check()
             
         screen = grab_screen(SCREEN_REGION)
         screen = cv2.resize(screen, IMAGE_NEW_SIZE)
@@ -215,9 +219,9 @@ with detection_graph.as_default():
               jump()
 
         #cv2.imshow(SCREEN_NAME, screen) #Uncomment to show bounding boxes (Reduces framerate by about 2)
-        previousTime = time.time()
+        #showFrameTime() #Uncomment to show frame time in MS
         
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+        if cv2.waitKey(2) & 0xFF == ord('q'):
           cv2.destroyAllWindows()
           break
 

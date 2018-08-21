@@ -1,5 +1,5 @@
 # TREXAI
-## A VERY basic neural network genetic algoirithm to play Google's dino game
+## A VERY basic neural network genetic algorithm to play Google's dino game
 
 ![alt text](https://github.com/Will-J-Gale/TREXAI/blob/master/Images/TREXAI.gif)
 
@@ -9,7 +9,7 @@ Then a JavaScript copy of the real dino game was created and a simple neuroevolu
 When trained the weights were copied into the python version which used the exact same neural network shape.
 The detected trex and enemy positions were used as the input to the python neural network.
 
-## Python Prerequisits
+## Python Prerequisites
 * OpenCV.
 * Tensorflow GPU.
 * Numpy.
